@@ -1,4 +1,201 @@
 /* partie de stef */
+body{
+    background-color: rgb(251, 255, 250);
+    margin: 0%;
+}
+
+#navbar {
+    text-decoration: none;
+    list-style: none;
+    color: #469439;
+    font-size: 1.5em;
+    width: 100%;
+    height: auto;
+ background-color: rgb(255, 255, 255);
+ display: grid;
+ grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr;
+ grid-template-rows: 60px;
+ margin: 0%;
+ align-self: center;
+ border-bottom: #488b29 solid 1px;
+ padding-top: 16px;
+ position: fixed;
+}
+/* position: fixed permet d'avoir une barre qui reste en position même en scrollant */
+nav a {
+    display: none;
+    text-decoration: none;
+}
+/* display:none permet de cacher un élèment, plus efficace que hidden car il cache aussi son emplacement */
+
+#icon {
+    border: 1px solid #82cf5e;
+    border-radius: 100%;
+   padding: 3px;
+}
+/* border radius a 100% pour faire un effet arrondi */
+
+
+
+nav:hover a {
+    color: #86d677;
+    display: inline-block;
+    text-align: center;   
+    padding: 2%;
+  
+}
+nav:hover ul {
+
+    width: 100%;
+    justify-content:space-around;
+}
+
+.header {
+    display:block;
+    text-align: center;
+    width: 100%;
+    margin-right: 0%;
+    justify-content:center;
+    background-color: #faddcd9f;
+    padding-bottom: 5%;
+    
+
+
+}
+
+#logo {
+   /* relative permet au logo de rester au-dessus */
+    position: relative;
+    width: 150px;
+    height: 100%;
+    margin-inline: 45%;
+    animation-name: logo ;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+    -webkit-animation-duration: 2s ;
+    -webkit-animation-iteration-count: 3;
+    -moz-animation-name: logo;
+    -moz-animation-duration: 2s ;
+    -moz-animation-iteration-count: 3 ;
+    transform-origin: 50% top;
+}
+/* animation name permet de nommer l'icone d'animation pour lui donner des commandes via @-webkit-keyframes, 
+animation duration est le temps que met l'animation pour une sequence (0% à 100%) et animation itération count est le temps ou l'animation est active (peut se renouveler infiniment via infinite */
+
+/* @ webkit keyframes permet de decrire les actions de l'animation, on peut utiliser webkit-transform: rotate ou spin ou encore left:100px ou right: 100px  etc.*/
+@-webkit-keyframes logo {
+  0% {
+    -webkit-transform: rotate(0deg)
+}
+50% {
+    -webkit-transform: rotate(45deg);
+}
+75% {
+    -webkit-animation: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(-45deg);
+}
+}
+  @-moz-keyframes logo {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+    50% {
+        -webkit-transform: rotate(45deg);
+    }
+    75% {
+        -webkit-animation: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes logo {
+  0% {
+    -webkit-transform: rotate(0deg);
+}
+25% {
+    -webkit-transform: rotate(45deg);
+}
+50% {
+    -webkit-animation: rotate(0deg);
+}
+75% {
+    -webkit-transform: rotate(-45deg);
+}
+100% {
+    -webkit-transform: rotate(0deg);
+}
+
+  }
+
+.Top {
+    background-image: url('../images/tea-time.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding: 100px;
+}
+.title {
+    /* display: flex; */
+    color: rgb(255, 255, 255);
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+    padding-top: 8%;
+    font-weight: bolder;
+    font-size: 60px;
+}
+#ban {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    background-size: cover;
+
+}
+.header p {
+    width: 50%;
+   display: flex;
+   vertical-align: middle;
+   align-items: center;
+   padding-inline: 25%;
+   font-size: 1.6em;
+
+  
+}
+hr {
+    width: 200px;
+}
+
+
+@media screen and (max-width:600px) {
+
+    #navbar:hover {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 1px;
+        color: rgb(28, 126, 4);
+        border-bottom: transparent;
+        /* background-color: #ffffff; */
+    }
+    nav:hover a  {
+        text-align: left;
+        padding: 2%;
+        
+        
+    }
+/* Le "nav a:hover" est different de nav:hover a", nav a:hover permet de changer l'élèment dès qu'on passe la souris dessus, tandis que nav:hover a change tout les élèments "a"  dès qu'on passe la souris sur la nav   */
+    nav a:hover{
+        font-weight: bold;
+    }
+    .button {
+        border-bottom: 1px solid black;
+    }
+}
 /* partie de stef */
 
 /* partie de ray */
