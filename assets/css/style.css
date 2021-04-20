@@ -5,4 +5,115 @@
 /* partie de ray */
 
 /* partie de ben */
+body {
+    margin-bottom: 0%;
+}
+
+.bottomliste {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    border: solid black 1px;
+    padding: 1%;
+    background-color: #faddcd9f;
+}
+
+.bottomliste a {
+    text-decoration: none;
+    /* Supprime le soulignement d'un lien*/
+    color: black;
+}
+
+ul {
+    list-style: none;
+    /* supprime les puces*/
+}
+
+.network {
+    width: 30px;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.4fr;
+    gap: 4%;
+    /*Espace entre mes grid*/
+    border: solid black 1px;
+    background-color: #faddcd9f;
+}
+
+.grid1 p {
+    line-height: 0.1em;
+}
+
+.réseaux p {
+    display: inline;
+}
+
+.map-responsive {
+    grid-column: 3/8;
+    /* se traduit par : commence a la 3éme colonne finis à la 8éme*/
+    grid-row: 1/2;
+}
+
+.contact {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.horaires {
+    grid-column: 5/7;
+    grid-row: 2/3;
+}
+
+.réseaux {
+    grid-column: 8/10;
+    grid-row: 2/3;
+}
+
+.bloc1 {
+    display: flex;
+    justify-content: space-around;
+    /*espace entre mes blocs*/
+    padding-bottom: 20px;
+}
+
+.recherche{
+    margin-top: 30px;
+}
+
+@media screen and (max-width:600px) {
+    .grid1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr 0.2fr 0.2fr;
+        gap: 0.2px;
+    }
+    .map-responsive {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .contact {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: center;
+    }
+    .horaires {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        text-align: center;
+    }
+    .réseaux {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        text-align: center;
+    }
+    .bloc1 {
+        font-size: 12px;
+    }
+    .bottomliste {
+        font-size: 12px;
+    }
+}
 /* partie de ben */
