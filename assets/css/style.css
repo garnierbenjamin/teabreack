@@ -2,6 +2,178 @@
 /* partie de stef */
 
 /* partie de ray */
+/* corps de la page, photos galerie */
+
+#container {
+    background: #ffffff;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 30px;
+    color: #722a04;
+    font-family:'Calibri';
+    font-size: 20px;
+}
+.container1 {
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+}
+.container1 .card {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    background: #faddcd9f;
+}
+.container1 .card:nth-child(even) {
+    flex-direction: column-reverse;
+}
+.container1 .card .imgegalery {
+    position: relative;
+    width: 350px;
+    height: 400px;
+}
+.container1 .card .imgegalery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container1 .card .content {
+    position:relative;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container1 .card .content div {
+    padding: 20px;
+    text-align:justify;
+}
+
+
+@media (max-width:1920px) {
+    .container1 {
+        grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+    }
+    .container1 .card {
+        flex-direction: row;
+        margin: 40px 0;
+    }
+    .container1 .card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .container1 .card .imgegalery,
+    .container1 .card .content {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .container1{
+        width: 100%;
+    }
+    .container1 .card {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .container1 .card:nth-child(even) {
+        flex-direction: column;
+    }
+    .container1 .card .imgegalery,
+    .container1 .card .content {
+        width: 100%;
+    }
+    .container1 .card .content {
+        height: 400px;
+    }
+}
+
+
+/* bas de la page, présentation de l'équipe */
+
+#container2 {
+    width: 1100px;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    margin-top: 100px;
+    display: grid;
+    column-gap: 170px;
+    row-gap: 15px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50px 400px 20px;
+    grid-template-areas:
+     "title title title"
+     "benjaminimage stephanieimage rayimage"
+     "benjaminname stephaniename rayname";
+}
+#title {
+    grid-area: title;
+    text-align: center;
+    margin-top: -45px ;
+    border-radius: 10px;
+    color: #722a04;
+}
+#benjaminimage {
+    grid-area: benjaminimage;
+}
+.benjaminname {
+    grid-area: benjaminname;
+}
+#stephanieimage {
+    grid-area: stephanieimage;
+}
+.stephaniename {
+    grid-area: stephaniename;
+}
+#rayimage {
+    grid-area: rayimage;
+}
+.rayname {
+    grid-area: rayname;
+}
+.photos img{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+.item {
+    text-align:center;
+    margin-top: -45px;
+    background:  #faddcd9f;
+    color: #722a04;
+}
+
+
+/* responsive pour les mobiles, photos équipe */
+
+
+@media screen and (max-width:600px) {
+    #container2 {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 50%;
+        grid-template-rows: 50px 400px 20px 400px 20px 400px 20px;
+        grid-template-areas:
+            "title"
+            "benjaminimage"
+            "benjaminname"
+            "stephanieimage"
+            "stephaniename" 
+            "rayimage"
+            "rayname";
+}
+}
+
 /* partie de ray */
 
 /* partie de ben */
