@@ -1,23 +1,27 @@
 /* partie de stef */
+@font-face {
+    font-family: "edward";
+    src: url('../fonts/edward.ttf');
+}
+
 body{
-    background-color: rgb(251, 255, 250);
+    background-color: rgb(255, 255, 255);
     margin: 0%;
+    color: #722a04;
 }
 
 #navbar {
     text-decoration: none;
     list-style: none;
-    color: #469439;
     font-size: 1.5em;
     width: 100%;
     height: auto;
- background-color: rgb(255, 255, 255);
+ background-color:#ffffff;
  display: grid;
  grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr;
  grid-template-rows: 60px;
  margin: 0%;
  align-self: center;
- border-bottom: #488b29 solid 1px;
  padding-top: 16px;
  position: fixed;
 }
@@ -29,7 +33,7 @@ nav a {
 /* display:none permet de cacher un élèment, plus efficace que hidden car il cache aussi son emplacement */
 
 #icon {
-    border: 1px solid #82cf5e;
+    border: 1px solid #722a04;
     border-radius: 100%;
    padding: 3px;
 }
@@ -38,7 +42,7 @@ nav a {
 
 
 nav:hover a {
-    color: #86d677;
+    color: #722a04;
     display: inline-block;
     text-align: center;   
     padding: 2%;
@@ -56,18 +60,19 @@ nav:hover ul {
     width: 100%;
     margin-right: 0%;
     justify-content:center;
-    background-color: #faddcd9f;
+    background-color: #ffffff;
     padding-bottom: 5%;
-    
+    font-family: "edward";
+    font-size: 1.8em;
 
 
 }
 
 #logo {
    /* relative permet au logo de rester au-dessus */
-    position: relative;
-    width: 150px;
-    height: 100%;
+    position: absolute;
+    width: 400px;
+    height: auto;
     margin-inline: 45%;
     animation-name: logo ;
     animation-duration: 2s;
@@ -78,6 +83,7 @@ nav:hover ul {
     -moz-animation-duration: 2s ;
     -moz-animation-iteration-count: 3 ;
     transform-origin: 50% top;
+    text-align: center;
 }
 /* animation name permet de nommer l'icone d'animation pour lui donner des commandes via @-webkit-keyframes, 
 animation duration est le temps que met l'animation pour une sequence (0% à 100%) et animation itération count est le temps ou l'animation est active (peut se renouveler infiniment via infinite */
@@ -134,20 +140,21 @@ animation duration est le temps que met l'animation pour une sequence (0% à 100
 .Top {
     background-image: url('../images/tea-time.jpg');
     background-size:cover;
-    background-repeat: no-repeat;
+    background-repeat:space;
     height: 100%;
-    padding: 100px;
+    padding: 200px;
 }
 .title {
     /* display: flex; */
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     vertical-align: middle;
     align-items: center;
     justify-content: center;
-    margin: 0%;
-    padding-top: 8%;
-    font-weight: bolder;
-    font-size: 60px;
+    margin: 5%;
+    padding-top: 2%;
+    font-size: 400%;
+    font-family:"edward";
+
 }
 #ban {
     max-width: 100%;
@@ -157,17 +164,17 @@ animation duration est le temps que met l'animation pour une sequence (0% à 100
 
 }
 .header p {
-    width: 50%;
+    width: 80%;
    display: flex;
    vertical-align: middle;
    align-items: center;
-   padding-inline: 25%;
+   padding-inline: 10%;
    font-size: 1.6em;
 
   
 }
 hr {
-    width: 200px;
+    width: 150px;
 }
 
 
@@ -221,10 +228,9 @@ hr {
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
 }
 .container1 .card {
-    position: relative;
     display:flex;
     flex-direction: column;
-    background: #faddcd9f;
+    background: #ffffffff;
 }
 .container1 .card:nth-child(even) {
     flex-direction: column-reverse;
@@ -243,7 +249,7 @@ hr {
     object-fit: cover;
 }
 .container1 .card .content {
-    position:relative;
+    /* position:relative; */
     width: 350px;
     height: 400px;
     display: flex;
@@ -346,7 +352,7 @@ hr {
 .item {
     text-align:center;
     margin-top: -45px;
-    background:  #faddcd9f;
+    background:  #ffffffff;
     color: #722a04;
 }
 
@@ -374,9 +380,6 @@ hr {
 /* partie de ray */
 
 /* partie de ben */
-body {
-    margin-bottom: 0%;
-}
 
 .bottomliste {
     list-style: none;
@@ -384,7 +387,7 @@ body {
     justify-content: space-around;
     border: solid black 1px;
     padding: 1%;
-    background-color: #faddcd9f;
+    background-color: #ffffffff;
 }
 
 .bottomliste a {
@@ -408,8 +411,8 @@ ul {
     grid-template-rows: 1fr 0.4fr;
     gap: 4%;
     /*Espace entre mes grid*/
-    border: solid black 1px;
-    background-color: #faddcd9f;
+    background-color: #ffffffff;
+    margin-top: 40px;
 }
 
 .grid1 p {
@@ -421,6 +424,7 @@ ul {
 }
 
 .map-responsive {
+    padding-top: 20px;
     grid-column: 3/8;
     /* se traduit par : commence a la 3éme colonne finis à la 8éme*/
     grid-row: 1/2;
